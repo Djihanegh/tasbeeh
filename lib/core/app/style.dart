@@ -3,8 +3,18 @@ import 'package:google_fonts/google_fonts.dart';
 
 final lightTheme = _getTheme();
 
+
 const _primary = Color(0xFFB14A2A);
-const _secondary = Color(0xFFae6324);
+const _secondary =  Color(0xFFc66039) ;// Color(0xFFb14a29); //Color(0xFFae6324);
+const _tertiary =  Color(0xFFde7a4c);
+
+const brown = [
+  Color(0xFFb14a29),
+  Color(0xFFde7a4c),
+  Color(0xFFc66039),
+  Color(0xFFf4dcd4),
+  Color(0xFFfef9f6)
+];
 
 const _background = Color(0xFFFFF9F6);
 const _lightest = Colors.white;
@@ -28,6 +38,10 @@ final _lightColorScheme = ColorScheme(
   onSecondary: _darkest,
   secondaryContainer: _secondary.withOpacity(0.2),
   onSecondaryContainer: _darkest,
+  // Tertiary
+  tertiary: _tertiary,
+  onTertiary: _tertiary,
+
   // Error
   error: _red,
   onError: _lightest,

@@ -6,12 +6,12 @@ import 'core/app/tasbeeh_app.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
   _initLoggy();
 
-  runApp(const TasbeehApp());
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(const TasbeehApp());
+  });
 }
 
 void _initLoggy() {

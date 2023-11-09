@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tasbeeh/core/extension/context.dart';
 
+import 'widgets/home_view.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -15,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _HomeTab(
       label: 'Home',
       icon: Icons.home,
-      builder: (context) => const Center(child: Text('Home')),
+      builder: (context) => const HomeView(),
     ),
     _HomeTab(
       label: 'Adkar',
