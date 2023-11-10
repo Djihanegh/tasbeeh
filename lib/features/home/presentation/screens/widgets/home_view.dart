@@ -19,6 +19,8 @@ class _HomeViewState extends State<HomeView> {
         children: [
           AppBarWidget(),
           PrayerTimesWidget(),
+          DuaaWidget(),
+          NamesOfAllahWidget()
         ],
       ));
     });

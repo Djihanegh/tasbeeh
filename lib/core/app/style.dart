@@ -15,7 +15,7 @@ const brown = [
   Color(0xFFfef9f6)
 ];
 
-const _background = Color(0xFFFFF9F6);
+const _background = Color(0xFFfef9f6);//0xFFFFF9F6);
 const _lightest = Colors.white;
 const _darkest = Colors.black;
 const _darker = Colors.black87;
@@ -276,14 +276,15 @@ TextTheme _getTextTheme(ColorScheme colorScheme) {
       height: bodyHeight,
       letterSpacing: bodyLetterSpacing,
       color: bodyColor,
-      fontWeight: bodyWeight,
+      fontWeight: FontWeight.bold,
+
     ),
     bodyMedium: TextStyle(
       fontSize: 14,
       height: bodyHeight,
       letterSpacing: bodyLetterSpacing,
       color: bodyColor,
-      fontWeight: bodyWeight,
+      fontWeight: FontWeight.w700,
     ),
     bodySmall: TextStyle(
       fontSize: 12,

@@ -17,14 +17,20 @@ class PrayerTimesWidget extends StatelessWidget {
             top: 40,
           ),
           child: Container(
-            // height: 260,
             width: constraints.maxWidth,
             decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(
-                Radius.circular(15),
-              ),
-              color: lightTheme.colorScheme.primaryContainer,
-            ),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(15),
+                ),
+                color: lightTheme.colorScheme.primaryContainer.withOpacity(0.1),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.white.withOpacity(0.1),
+                    spreadRadius: 1,
+                    blurRadius: 1,
+                    offset: const Offset(0, 1), // changes position of shadow
+                  ),
+                ]),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +43,7 @@ class PrayerTimesWidget extends StatelessWidget {
                       bottomLeft: Radius.circular(15),
                       topRight: Radius.circular(15),
                     ),
-                    color: lightTheme.colorScheme.primary,
+                    color:  lightTheme.colorScheme.primary,
                   ),
                   child: Row(
                     children: [
@@ -67,7 +73,8 @@ class PrayerTimesWidget extends StatelessWidget {
                             prayer.key,
                             style: lightTheme.textTheme
                                 .apply(displayColor: Colors.black)
-                                .bodyMedium,
+                                .bodyMedium
+                            ,
                           ),
                           AutoSizeText(
                             prayer.value,
