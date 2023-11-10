@@ -7,7 +7,9 @@ import 'core/app/tasbeeh_app.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   _initLoggy();
-
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+  ));
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
     runApp(const TasbeehApp());

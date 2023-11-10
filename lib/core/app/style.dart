@@ -3,10 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 final lightTheme = _getTheme();
 
-
 const _primary = Color(0xFFB14A2A);
-const _secondary =  Color(0xFFc66039) ;// Color(0xFFb14a29); //Color(0xFFae6324);
-const _tertiary =  Color(0xFFde7a4c);
+const _secondary = Color(0xFFc66039); // Color(0xFFb14a29); //Color(0xFFae6324);
+const _tertiary = Color(0xFFde7a4c);
 
 const brown = [
   Color(0xFFb14a29),
@@ -295,7 +294,7 @@ TextTheme _getTextTheme(ColorScheme colorScheme) {
 
     // Label
     labelLarge: TextStyle(
-      fontSize: 16,
+      fontSize: 18,
       height: bodyHeight,
       letterSpacing: bodyLetterSpacing,
       color: labelColor,
@@ -317,5 +316,5 @@ TextTheme _getTextTheme(ColorScheme colorScheme) {
     ),
   );
 
-  return GoogleFonts.rubikTextTheme(textTheme);
+  return GoogleFonts.cairoTextTheme(textTheme);
 }

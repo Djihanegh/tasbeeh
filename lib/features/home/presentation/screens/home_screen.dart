@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
       );
       bottomNavigationBar = null;
     } else {
-      body = SafeArea(child: content);
+      body = content;
       bottomNavigationBar = BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: (index) => setState(() => _selectedIndex = index),
