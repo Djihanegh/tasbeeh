@@ -1,10 +1,12 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/app/style.dart';
+import '../app/style.dart';
 
-class AdkarTopBar extends StatelessWidget {
-  const AdkarTopBar({super.key});
+class CustomTopBar extends StatelessWidget {
+  const CustomTopBar({super.key, required this.title});
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class AdkarTopBar extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.only(right: 20),
                   child: AutoSizeText(
-                    'الاذكار',
+                    title,
                     style: lightTheme.primaryTextTheme.labelLarge!
                         .copyWith(fontSize: 25),
                   ))

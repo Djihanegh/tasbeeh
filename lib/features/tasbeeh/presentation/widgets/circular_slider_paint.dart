@@ -49,9 +49,6 @@ class _CircularSliderState extends State<CircularSliderPaint> {
   /// start angle in radians where we need to locate the init handler
   double? _startAngle;
 
-  /// end angle in radians where we need to locate the end handler
-  double? _endAngle;
-
   /// the absolute angle in radians representing the selection
   double? _sweepAngle;
 
@@ -100,14 +97,12 @@ class _CircularSliderState extends State<CircularSliderPaint> {
     }
 
     _currentAngle = 0.0;
-    _endAngle = percentageToRadians(endPercent);
+
     _sweepAngle = percentageToRadians(sweep.abs());
 
     _painter = SliderPainter(
         currentAngle: _currentAngle,
-        endAngle: _endAngle!,
         sweepAngle: _sweepAngle!,
-        handlerOutterRadius: widget.handlerOutterRadius,
         showRoundedCapInSelection: widget.showRoundedCapInSelection,
         sliderStrokeWidth: widget.sliderStrokeWidth,
         selectionColor: lightTheme.colorScheme.primary.withOpacity(0.5));

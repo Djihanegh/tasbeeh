@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/ui/ui_export.dart';
-import 'widgets/adkar_top_bar.dart';
+import '../../../../core/ui/custom_top_bar.dart';
 
 class AdkarScreen extends StatefulWidget {
   const AdkarScreen({super.key});
@@ -18,7 +18,9 @@ class _AdkarScreenState extends State<AdkarScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const AdkarTopBar(),
+            const CustomTopBar(
+              title: 'الاذكار',
+            ),
             Expanded(
                 child: ListView.builder(
                     itemCount: 10,

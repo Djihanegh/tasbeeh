@@ -18,7 +18,7 @@ class _HomeViewState extends State<HomeView> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AppBarWidget(),
+          HomeTopBar(),
           PrayerTimesWidget(),
           DuaaWidget(),
           ReadMoreContainer(

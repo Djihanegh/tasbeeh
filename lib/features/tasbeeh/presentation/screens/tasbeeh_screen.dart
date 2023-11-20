@@ -2,6 +2,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:tasbeeh/features/tasbeeh/presentation/widgets/tasbeeh_counter.dart';
 
+import '../../../../core/ui/custom_top_bar.dart';
+
 class TasbeehScreen extends StatefulWidget {
   const TasbeehScreen({super.key});
 
@@ -12,14 +14,14 @@ class TasbeehScreen extends StatefulWidget {
 class _TasbeehScreenState extends State<TasbeehScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body: Padding(
-            padding: EdgeInsets.all(14),
-            child: Center(
-                child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [TasbeehCounter()],
-            ))));
+    return Scaffold(body: LayoutBuilder(builder: (context, constraints) {
+      return const Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomTopBar(title: 'مسبحة الكترونية'),
+            Center(child: TasbeehCounter())
+          ]);
+    }));
   }
 }

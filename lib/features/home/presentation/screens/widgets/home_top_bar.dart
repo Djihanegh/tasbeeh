@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/app/style.dart';
 
-class AppBarWidget extends StatelessWidget {
-  const AppBarWidget({super.key});
+class HomeTopBar extends StatelessWidget {
+  const HomeTopBar({super.key});
 
   @override
   Widget build(BuildContext context) {
