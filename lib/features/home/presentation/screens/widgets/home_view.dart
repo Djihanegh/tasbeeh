@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasbeeh/core/ui/read_more_container.dart';
 import 'widgets.dart';
 
 class HomeView extends StatefulWidget {
@@ -20,7 +21,12 @@ class _HomeViewState extends State<HomeView> {
           AppBarWidget(),
           PrayerTimesWidget(),
           DuaaWidget(),
-          NamesOfAllahWidget()
+          ReadMoreContainer(
+            title: 'اسماء الله الحسنى',
+            content: 'الرحمنِ',
+            key: Key('names-of-allah'),
+          )
+          //  NamesOfAllahWidget()
         ],
       ));
     });

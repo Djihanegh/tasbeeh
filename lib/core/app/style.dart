@@ -15,7 +15,7 @@ const brown = [
   Color(0xFFfef9f6)
 ];
 
-const _background = Color(0xFFfef9f6);//0xFFFFF9F6);
+const _background = Color(0xFFfef9f6); //0xFFFFF9F6);
 const _lightest = Colors.white;
 const _darkest = Colors.black;
 const _darker = Colors.black87;
@@ -24,6 +24,9 @@ const _disabled = Colors.grey;
 const _yellow = Color(0xFFfecc5d);
 
 const _red = Colors.red;
+
+const appTopBarRadius = BorderRadius.only(
+    bottomRight: Radius.circular(60), bottomLeft: Radius.circular(60));
 
 final _lightColorScheme = ColorScheme(
   brightness: Brightness.light,
@@ -207,7 +210,7 @@ ThemeData _getTheme() {
 
 TextTheme _getTextTheme(ColorScheme colorScheme) {
   const headlineColor = _darker;
-  const headlineWeight = FontWeight.w900;
+  const headlineWeight = FontWeight.w700;
   const headlineHeight = 1.2;
   const headlineLetterSpacing = 2.5;
 
@@ -226,16 +229,16 @@ TextTheme _getTextTheme(ColorScheme colorScheme) {
   const textTheme = TextTheme(
     // Headline
     headlineLarge: TextStyle(
-      fontSize: 24,
+      fontSize: 30,
       height: headlineHeight,
       letterSpacing: headlineLetterSpacing,
       color: headlineColor,
       fontWeight: headlineWeight,
     ),
     headlineMedium: TextStyle(
-      fontSize: 20,
+      fontSize: 30,
       height: headlineHeight,
-      letterSpacing: headlineLetterSpacing,
+      letterSpacing: -0.96,
       color: headlineColor,
       fontWeight: headlineWeight,
     ),
@@ -277,7 +280,6 @@ TextTheme _getTextTheme(ColorScheme colorScheme) {
       letterSpacing: bodyLetterSpacing,
       color: bodyColor,
       fontWeight: FontWeight.bold,
-
     ),
     bodyMedium: TextStyle(
       fontSize: 14,

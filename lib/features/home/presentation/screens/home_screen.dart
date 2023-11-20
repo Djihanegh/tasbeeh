@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasbeeh/core/extension/context.dart';
+import 'package:tasbeeh/features/adkar/adkar_export.dart';
 
 import 'widgets/home_view.dart';
 
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _HomeTab(
       label: 'Adkar',
       icon: Icons.explore,
-      builder: (context) => const Center(child: Text('Adkar')),
+      builder: (context) => const AdkarScreen(),
     ),
     _HomeTab(
       label: 'Tasbeeh',

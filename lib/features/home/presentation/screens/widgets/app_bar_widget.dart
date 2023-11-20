@@ -10,12 +10,10 @@ class AppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return Container(
-          height: 150,
+          height: 140,
           width: constraints.maxWidth,
           decoration: BoxDecoration(
-            borderRadius: const BorderRadius.only(
-                bottomRight: Radius.circular(35),
-                bottomLeft: Radius.circular(35)),
+            borderRadius: appTopBarRadius,
             color: lightTheme.colorScheme.primary,
           ),
           child: Column(

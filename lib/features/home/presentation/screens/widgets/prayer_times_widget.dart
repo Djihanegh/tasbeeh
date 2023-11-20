@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:tasbeeh/core/extension/sized_box_extension.dart';
+import 'package:tasbeeh/core/extension/extension_export.dart';
+import '../../../../../core/app/export_app.dart';
 
-import '../../../../../core/app/style.dart';
 
 class PrayerTimesWidget extends StatelessWidget {
   const PrayerTimesWidget({super.key});

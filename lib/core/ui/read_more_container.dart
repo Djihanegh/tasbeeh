@@ -4,17 +4,22 @@ import 'package:tasbeeh/core/extension/sized_box_extension.dart';
 
 import '../../../../../core/app/style.dart';
 
-class NamesOfAllahWidget extends StatelessWidget {
-  const NamesOfAllahWidget({super.key});
+class ReadMoreContainer extends StatelessWidget {
+  const ReadMoreContainer(
+      {super.key, required this.title, required this.content, this.topPadding});
+
+  final String title;
+  final String content;
+  final double? topPadding;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return Padding(
-          padding: const EdgeInsets.only(
+          padding: EdgeInsets.only(
             left: 10,
             right: 10,
-            top: 30,
+            top: topPadding ?? 30,
           ),
           child: Container(
               width: constraints.maxWidth,
@@ -31,16 +36,16 @@ class NamesOfAllahWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         AutoSizeText(
-                          'اسماء الله الحسنى',
+                          title,
                           style: lightTheme.primaryTextTheme.bodySmall!
                               .copyWith(color: lightTheme.colorScheme.primary),
                         ),
                         10.heightXBox,
-                        AutoSizeText('الرحمنِ',
+                        AutoSizeText(content,
                             style: lightTheme.textTheme
                                 .apply(
-                                    displayColor: Color(0xFFf4dcd4),
-                                    bodyColor: Color(0xFFde7a4c))
+                                    displayColor: const Color(0xFFf4dcd4),
+                                    bodyColor: const Color(0xFFde7a4c))
                                 .bodyLarge),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -50,7 +55,7 @@ class NamesOfAllahWidget extends StatelessWidget {
                                 style: lightTheme.textTheme
                                     .apply(displayColor: Colors.black)
                                     .bodySmall),
-                          const  Icon(
+                            const Icon(
                               Icons.keyboard_arrow_left,
                               color: Colors.black,
                             )
