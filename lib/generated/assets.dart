@@ -2,8 +2,14 @@
 class Assets {
   Assets._();
 
+  static const String assetsImagesSebha = 'assets/images/sebha.png';
   static const String imagesDuaa = 'assets/images/duaa.jpg';
   static const String imagesSebha = 'assets/images/sebha.jpg';
+  static const String imagesSebha2 = 'assets/images/sebha2.png';
+  static const String imagesSebha3 = 'assets/images/sebha3.png';
+  static const String imagesSebha4 = 'assets/images/sebha4.png';
+  static const String imagesSebha5 = 'assets/images/sebha5.png';
+  static const String imagesSebha6 = 'assets/images/sebha6.png';
   static const String videosTASBIH = 'assets/videos/TASBIH.mp4';
   static const String videosTASBIH1 = 'assets/videos/TASBIH_1.mp4';
 
